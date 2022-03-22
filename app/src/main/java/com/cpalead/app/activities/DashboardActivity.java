@@ -392,7 +392,7 @@ public class DashboardActivity extends AppCompatActivity {
     private void OpenLocation(String url, String tag) {
         try {
             URL uri = new URL(url);
-            if (uri.getHost().contains("app.adjust.net.in")) {
+            if (uri.getHost().contains("app.adjust.net.in") || uri.getHost().contains("app.adjust.world")) {
                 OpenAdjustUrl(url);
             } else if (uri.getHost().contains("o18.click")) {
                 OpenO18Url(url);
@@ -407,7 +407,7 @@ public class DashboardActivity extends AppCompatActivity {
     }
 
     private void OpenAdjustUrl(String url) {
-        OpenUrl(url, "ADJUST");
+        // OpenUrl(url, "ADJUST");
 
         // Parse URL
         Uri uri = Uri.parse(url);
